@@ -33,7 +33,7 @@ Entregable2-Duque/
 ├── js/
 │ └── app.js
 ├── css/
-│ └── estilos.css
+│ └── styles.css
 └── README.md
 
 
