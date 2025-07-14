@@ -1,14 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teje y Desteje</title>
-</head>
-<body>
-    <h1>Teje y Desteje</h1>
-    <h2>Carrito de compras</h2>
+<html lang="es">
 
-    <script src="app.js"></script>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teje y Desteje - Carrito de Compras</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Teje y Desteje</h1>
+        <p>Bienvenidos a nuestra tienda!</p>
+    </header>
+
+    <main>
+
+        <section aria-label="Productos">
+            <h2 class="titulo-seccion">Productos disponibles</h2>
+            <div id="productos-container"></div>
+        </section>
+
+
+        <section id="opciones-compra" aria-label="Opciones de compra">
+            <label for="primera-compra">
+                <input type="checkbox" id="primera-compra" />
+                ¿Es tu primera compra?
+            </label>
+        </section>
+
+
+        <section id="carrito-section" aria-label="Carrito de compras">
+            <h2>🛒 Carrito</h2>
+            <div id="carrito-container" role="list"></div>
+            <p id="subtotal" aria-live="polite"></p>
+
+            <button id="vaciar-carrito" type="button">Vaciar carrito</button>
+            <button id="finalizar-compra" type="button">Finalizar compra</button>
+        </section>
+
+
+        <section id="mensaje-final" aria-live="polite" role="alert"></section>
+    </main>
+
+    <footer>
+        <p>© 2025 Teje y Desteje. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
 </body>
+
 </html>
