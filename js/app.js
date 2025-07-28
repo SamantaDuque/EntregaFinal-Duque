@@ -208,6 +208,8 @@ function vaciarCarrito() {
     subtotalDOM.textContent = "";
     mensajeFinal.innerHTML = "";
     mensajeError.textContent = "";
+
+    primeraCompraCheckbox.checked = false;
 }
 
 //  Eventos 
