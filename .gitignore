@@ -1,0 +1,21 @@
+node_modules/
+
+.vscode/
+*.code-workspace
+
+.DS_Store
+Thumbs.db
+
+*.log
+*.cache
+*.tmp
+
+package-lock.json
+yarn.lock
+
+/dist/
+/build/
+
+/data/productos.json  # opcional si el JSON lo generás dinámicamente
+
+.env
