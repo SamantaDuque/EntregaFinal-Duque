@@ -4,42 +4,56 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Teje y Desteje - Carrito de Compras</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>Teje y Desteje</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
     <header>
-        <h1>Teje y Desteje</h1>
-        <p>Bienvenidos a nuestra tienda!</p>
+        <img src="assets/img/logoTejeyDestejeRedondo.png" alt="Logo de Teje y Desteje" class="header-logo" />
+        <div class="header-text">
+            <h1>Teje y Desteje</h1>
+            <p>¡Bienvenidos a nuestra tienda!</p>
+        </div>
     </header>
 
+
+
     <main>
-
+        <!-- Sección de productos -->
         <section aria-label="Productos">
-            <h2 class="titulo-seccion">Productos disponibles</h2>
-            <div id="productos-container"></div>
+            <h2 class="titulo-seccion">Nuestros productos</h2>
+            <h3 class="subtitulo-seccion">Hecho a mano con Amor 💕</h3>
+            <div id="productos-container" role="list"></div>
+            <div id="mensaje-error" class="mensaje-error" aria-live="assertive"></div>
         </section>
 
-
-        <section id="opciones-compra" aria-label="Opciones de compra">
-            <label for="primera-compra">
-                <input type="checkbox" id="primera-compra" />
-                ¿Es tu primera compra?
-            </label>
-        </section>
-
-
+        <!-- Sección del carrito -->
         <section id="carrito-section" aria-label="Carrito de compras">
             <h2>🛒 Carrito</h2>
             <div id="carrito-container" role="list"></div>
+
+            <!-- Subtotal -->
             <p id="subtotal" aria-live="polite"></p>
 
-            <button id="vaciar-carrito" type="button">Vaciar carrito</button>
-            <button id="finalizar-compra" type="button">Finalizar compra</button>
+            <!-- Checkbox dentro del carrito -->
+            <div class="checkbox-wrapper">
+                <label class="checkbox-container" for="primera-compra">
+                    <input type="checkbox" id="primera-compra" />
+                    ¿Es tu primera compra?
+                </label>
+            </div>
+
+            <!-- Botones del carrito -->
+            <div class="botones-carrito">
+                <button id="vaciar-carrito" type="button">Vaciar carrito</button>
+                <button id="finalizar-compra" type="button">Finalizar compra</button>
+            </div>
         </section>
 
-
+        <!-- Mensaje final -->
         <section id="mensaje-final" aria-live="polite" role="alert"></section>
     </main>
 

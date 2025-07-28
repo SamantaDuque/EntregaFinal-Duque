@@ -1,0 +1,10 @@
+[
+    { "id": 1, "nombre": "📃 Frida Amigurumi", "precio": 1800, "categoria": "Tutorial" },
+    { "id": 2, "nombre": "📃 Bufanda Infinita", "precio": 2000, "categoria": "Tutorial" },
+    { "id": 3, "nombre": "🧶 Merino Sedificada", "precio": 4800, "categoria": "Insumos" },
+    { "id": 4, "nombre": "🧶 Familia", "precio": 1500, "categoria": "Insumos" },
+    { "id": 5, "nombre": "🧸 Groot", "precio": 35000, "categoria": "Amigurumis" },
+    { "id": 6, "nombre": "🧸 Spiderman", "precio": 40000, "categoria": "Amigurumis" },
+    { "id": 7, "nombre": "🧸 Ironman", "precio": 30000, "categoria": "Amigurumis" },
+    { "id": 8, "nombre": "🧸 Hulk", "precio": 25000, "categoria": "Amigurumis" }
+]

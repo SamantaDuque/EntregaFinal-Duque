@@ -28,13 +28,19 @@ Este proyecto es un simulador de carrito de compras desarrollado como **segunda 
 
 ## 📁 Estructura del proyecto
 
-Entregable2-Duque/
+EntregaFinal-Duque/
 ├── index.html
 ├── js/
-│ └── app.js
-├── css/
-│ └── styles.css
+│   └── app.js
+├── data/
+│   └── productos.json
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   └── img/
+│       └── logoTejeyDestejeRedondo.png
 └── README.md
+
 
 
 ---
