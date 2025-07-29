@@ -139,22 +139,58 @@ function renderizarCarrito() {
         div.classList.add("producto-carrito");
 
         div.innerHTML = `
-            <p>${prod.nombre} x${prod.cantidad} - $${(prod.precio * prod.cantidad).toFixed(2)}</p>
+            <p class="producto-info">
+                <span class="nombre-producto">${prod.nombre}</span>
+                <span class="precio-producto"> - $${(prod.precio * prod.cantidad).toFixed(2)}</span>
+            </p>
+            <button class="btn-restar-uno" data-index="${index}" aria-label="Quitar una unidad de ${prod.nombre}">–</button>
+            <span class="cantidad-carrito">x${prod.cantidad}</span>
+            <button class="btn-sumar-uno" data-index="${index}" aria-label="Agregar una unidad de ${prod.nombre}">+</button>
             <button class="btn-eliminar" data-index="${index}" aria-label="Eliminar ${prod.nombre} del carrito">&times;</button>
         `;
 
         carritoContainer.appendChild(div);
     });
 
+    // Listener para restar una unidad
+    document.querySelectorAll(".btn-restar-uno").forEach(button => {
+        button.addEventListener("click", (e) => {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            const item = carrito[index];
+            if (item.cantidad > 1) {
+                item.actualizarCantidad(item.cantidad - 1);
+            } else {
+                carrito.splice(index, 1);
+            }
+            guardarCarrito();
+            renderizarCarrito();
+        });
+    });
+
+    // Listener para sumar una unidad
+    document.querySelectorAll(".btn-sumar-uno").forEach(button => {
+        button.addEventListener("click", (e) => {
+            const index = parseInt(e.target.getAttribute("data-index"));
+            const item = carrito[index];
+            item.actualizarCantidad(item.cantidad + 1);
+            guardarCarrito();
+            renderizarCarrito();
+        });
+    });
+
+    // Listener para eliminar producto completo
     document.querySelectorAll(".btn-eliminar").forEach(button => {
         button.addEventListener("click", (e) => {
             const index = parseInt(e.target.getAttribute("data-index"));
-            eliminarDelCarrito(index);
+            carrito.splice(index, 1);
+            guardarCarrito();
+            renderizarCarrito();
         });
     });
 
     actualizarSubtotal();
 }
+
 
 function actualizarSubtotal() {
     let subtotal = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);

@@ -110,7 +110,6 @@ header p {
     font-size: 0.95rem;
 }
 
-
 .producto input[type="number"] {
     width: 70px;
     margin-top: 10px;
@@ -176,6 +175,7 @@ header p {
     font-weight: 400;
     color: #333;
 }
+
 .producto-carrito {
     display: flex;
     align-items: center;
@@ -185,12 +185,56 @@ header p {
     font-size: 0.9rem;
 }
 
-.producto-carrito p {
+.producto-info {
+    flex-grow: 1;
     margin: 0;
-    flex: 1;
 }
 
+.cantidad-carrito {
+    margin-left: 6px; 
+    font-weight: 700;
+    color: #444;
+}
+
+.producto-carrito p {
+    margin: 0;
+    flex: 1; 
+    padding-right: 10px;
+}
+
+.producto-carrito button {
+    margin-left: 4px; 
+    cursor: pointer;
+    padding: 3px 8px;
+    font-size: 16px;
+}
+
+.producto-carrito button.btn-restar-uno {
+    margin-left: 6px; 
+    margin-right: 0;
+    padding: 3px 8px;
+    font-size: 16px;
+    background-color: #ad62ae;
+}
+
+.producto-carrito button.btn-restar-uno:hover {
+    background-color: #89488A;
+}
+
+.producto-carrito button.btn-sumar-uno {
+    margin-left: 6px; 
+    margin-right: 0;
+    padding: 3px 8px;
+    font-size: 16px;
+    background-color: #84A47C;
+}
+
+.producto-carrito button.btn-sumar-uno:hover {
+    background-color: #718c6a;
+}   
+
 .producto-carrito button.btn-eliminar {
+    margin-left: 4px;
     background-color: #d63031;
     color: white;
     border: none;
@@ -205,6 +249,7 @@ header p {
     transition: background-color 0.3s ease;
 }
 
+
 .producto-carrito button.btn-eliminar:hover {
     background-color: #b71c1c;
 }
@@ -218,6 +263,7 @@ header p {
     font-size: 1rem;
     gap: 10px;
 }
+
 
 #subtotal {
     font-weight: 600;
